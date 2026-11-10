@@ -6,7 +6,7 @@ and cheapest, up or down. Then the level locks for the rest of the session. Each
 
 <img src="https://raw.githubusercontent.com/tommy5dollar/effort-router/main/docs/launch.gif" width="720" alt="Claude Code is overthinking your renames. Everyday prompts all run at high and usage drains fast. effort-router picks the effort for every prompt, easy ones drop to low, and usage lasts far longer. Up to 2x the usage, up to 3.5x faster, same results">
 
-It works with Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5, in the terminal and in the Desktop app's Code tab. It
+It works with Fable 5.2, Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5, in the terminal and in the Desktop app's Code tab. It
 requires Claude Code 2.1.287 or later in the terminal, or the Desktop app with Claude Code 2.1.286 or later. Haiku 5.5
 needs Claude Code 2.1.293 or later.
 
@@ -234,7 +234,7 @@ Set `routeSubagents` to `false` to leave subagents at the session's level.
 
 ## Models
 
-The router supports Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. Level names don't mean the same amount of thinking on each, and each responds to effort differently. In Claude Code, Opus 5.5, Sonnet 5.5 and Haiku 5.5 default to medium and Fable 5.1 to high. Opus 5.5 gains most from low to medium and little above high, while Sonnet 5.5 gains a lot at every step. Routing one like another would be a mistake.
+The router supports Fable 5.2, Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. Level names don't mean the same amount of thinking on each, and each responds to effort differently. In Claude Code, Opus 5.5, Sonnet 5.5 and Haiku 5.5 default to medium and Fable 5.2 and Fable 5.1 to high. Opus 5.5 gains most from low to medium and little above high, while Sonnet 5.5 gains a lot at every step. Routing one like another would be a mistake.
 
 Haiku 5.5 is the first Haiku with effort levels, and in practice a subagent model. The router picks up to high on it, below the `highestLevel` option, unless your own setting in a Haiku session is higher. Its price goes up 5 times on every token of a request whose prompt passes 100,000 tokens, so its notes tell the check to step up only when the task clearly needs it.
 

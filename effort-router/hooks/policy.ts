@@ -504,6 +504,8 @@ export type SupportedModel = {
 }
 
 export const SUPPORTED_MODELS: readonly SupportedModel[] = [
+  // Listed before Fable 5.1 so the bare `fable` alias names the newer model, as it does in Claude Code.
+  { id: 'claude-fable-5-2', alias: 'fable', name: 'Fable 5.2', notesFile: 'fable-5-2.md' },
   { id: 'claude-fable-5-1', alias: 'fable', name: 'Fable 5.1', notesFile: 'fable-5-1.md' },
   { id: 'claude-opus-5-5', alias: 'opus', name: 'Opus 5.5', notesFile: 'opus-5-5.md' },
   { id: 'claude-sonnet-5-5', alias: 'sonnet', name: 'Sonnet 5.5', notesFile: 'sonnet-5-5.md' },
@@ -512,7 +514,7 @@ export const SUPPORTED_MODELS: readonly SupportedModel[] = [
   { id: 'claude-haiku-5-5', alias: 'haiku', name: 'Haiku 5.5', notesFile: 'haiku-5-5.md', highest: 'high', checksOwnBrief: true },
 ]
 
-/** `Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5`. */
+/** `Fable 5.2, Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5`. */
 export const SUPPORTED_NAMES = SUPPORTED_MODELS.map(m => m.name).join(', ').replace(/, ([^,]*)$/, ' and $1')
 
 /** The supported model a model id or alias names (`claude-opus-5-5`, `claude-opus-5-5[1m]`, `opus`, a cloud provider's id), or undefined. */

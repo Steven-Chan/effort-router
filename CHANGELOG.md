@@ -2,6 +2,15 @@
 
 ## effort-router
 
+### 0.19.2-fork.1 (2026-11-10)
+
+Fork-only release, not from upstream.
+
+- **Fable 5.2 is supported.** Upstream 0.19.1 stands aside on it, because its model list stops at Fable 5.1.
+  - The `fable` alias now names Fable 5.2, as it does in Claude Code. Fable 5.1 is still found by its id.
+  - Its notes (`rules/models/fable-5-2.md`) come from Anthropic's migration guide for the model. They have no cost or
+    time figures against medium, because none have been measured: replace them when upstream ships its own.
+
 ### 0.19.1 (2026-10-10)
 
 - **The band closes itself after Lock, Unlock, Turn off and Turn on.** The change is printed and the footer shows the

@@ -716,8 +716,8 @@ describe('effort-router', () => {
       await submit($, 'fix the crash in the parser')
       expect(world.classifierCalls).toBe(0)
       expect((await footerOf(await mountFooter($))).shown).toBe('⏸️ MEDIUM')
-      expect(await route($, 'status')).toStartWith('Off on Haiku 4.5. It works with Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5.')
-      expect(await route($, 'on')).toBe("The router doesn't support Haiku 4.5, so your effort setting applies. It works with Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5.")
+      expect(await route($, 'status')).toStartWith('Off on Haiku 4.5. It works with Fable 5.2, Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5.')
+      expect(await route($, 'on')).toBe("The router doesn't support Haiku 4.5, so your effort setting applies. It works with Fable 5.2, Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5.")
     })
 
     test('a level set on a supported model is not applied after /model switches to another', async ($, on) => {
@@ -791,7 +791,7 @@ describe('effort-router', () => {
         event: 'api_request',
         attributes: {
           effort: 'high', model: 'claude-sonnet-5-5',
-          'effort_router.version': '0.19.1', 'effort_router.status': 'unlocked', 'effort_router.setting': 'medium', 'effort_router.level': 'high',
+          'effort_router.version': '0.19.2-fork.1', 'effort_router.status': 'unlocked', 'effort_router.setting': 'medium', 'effort_router.level': 'high',
         },
       })
       // Other records go out untouched.

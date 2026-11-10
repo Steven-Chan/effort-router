@@ -208,7 +208,7 @@ const FALLBACK_RULES =
 
 const HUMAN_ORIGINS = new Set(['composer', 'bridge', 'sdk'])
 /** Sent with each telemetry record, so a collector can tell versions apart. Keep in step with plugin.json. */
-const VERSION = '0.19.1'
+const VERSION = '0.19.2-fork.1'
 const COMMANDS = ['effort-router', 'er']
 
 function settingsOf(options: PluginOptions): Settings {
